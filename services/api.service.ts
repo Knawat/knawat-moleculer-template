@@ -37,32 +37,32 @@ import { OpenApiMixin } from '../mixins';
 
         aliases: {},
         /**
-				   * Before call hook. You can check the request.
-				   * @param {Context} ctx
-				   * @param {Object} route
-				   * @param {IncomingMessage} req
-				   * @param {ServerResponse} res
-				   * @param {Object} data
-				  onBeforeCall(ctx: Context<any,{userAgent: string}>,
-				   route: object, req: IncomingMessage, res: ServerResponse) {
-					Set request headers to context meta
-					ctx.meta.userAgent = req.headers["user-agent"];
-				  },
-				   */
+		 * Before call hook. You can check the request.
+		 * @param {Context} ctx
+		 * @param {Object} route
+		 * @param {IncomingMessage} req
+		 * @param {ServerResponse} res
+		 * @param {Object} data
+		 onBeforeCall(ctx: Context<any,{userAgent: string}>,
+		route: object, req: IncomingMessage, res: ServerResponse) {
+		Set request headers to context meta
+		ctx.meta.userAgent = req.headers["user-agent"];
+		},
+		*/
 
         /**
-				   * After call hook. You can modify the data.
-				   * @param {Context} ctx
-				   * @param {Object} route
-				   * @param {IncomingMessage} req
-				   * @param {ServerResponse} res
-				   * @param {Object} data
-				   *
-				   onAfterCall(ctx: Context, route: object, req: IncomingMessage, res: ServerResponse, data: object) {
-				  // Async function which return with Promise
-				  return doSomething(ctx, res, data);
-			  },
-				   */
+		 * After call hook. You can modify the data.
+		 * @param {Context} ctx
+		 * @param {Object} route
+		 * @param {IncomingMessage} req
+		 * @param {ServerResponse} res
+		 * @param {Object} data
+		 *
+		 onAfterCall(ctx: Context, route: object, req: IncomingMessage, res: ServerResponse, data: object) {
+		 // Async function which return with Promise
+		return doSomething(ctx, res, data);
+		},
+		*/
 
         // Calling options. More info: https://moleculer.services/docs/0.14/moleculer-web.html#Calling-options
         callingOptions: {},
