@@ -9,7 +9,8 @@
     "cli": "moleculer connect TCP",
     "ci": "jest --watch",
     "test": "jest --coverage",
-    "lint": "eslint --ext .ts ."
+    "lint": "eslint --ext .ts .",
+    "lint:fix": "eslint --ext .ts,.tsx . --fix"
   },
   "keywords": [
     "microservices",
@@ -33,6 +34,7 @@
     "ts-jest": "^25.3.0",
     "ts-node": "^8.6.2",
     "tsc-watch": "^4.2.9",
+    "moleculer-decorators": "^1.3.0",
     "typescript": "^3.9.7"
   },
   "dependencies": {

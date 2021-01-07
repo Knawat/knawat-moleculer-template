@@ -1,21 +1,18 @@
-import { ServiceSchema } from 'moleculer';
+import moleculer from 'moleculer';
+import { Service, Action, Event, Method } from 'moleculer-decorators';
 
 import { ProductsDB } from '../mixins';
 import { ProductsOpenapi } from '../mixins/openapi';
 import { ProductsValidation } from '../mixins/validation';
 
-const ProductsService: ServiceSchema = {
+@Service({
   name: 'products',
   mixins: [ProductsDB, ProductsValidation, ProductsOpenapi],
-
+})
+export default class Products extends moleculer.Service {
   /**
    * Actions
    */
-  actions: {
-    create: {
-      auth: [],
-    },
-  },
-};
-
-export = ProductsService;
+  @Action()
+  create() {}
+}
