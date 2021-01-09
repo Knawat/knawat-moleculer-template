@@ -22,7 +22,7 @@ const { MoleculerClientError, ValidationError } = Moleculer.Errors;
     fields: ['_id', 'name', 'category', 'price'],
   },
 })
-export default class ShopifyService extends Moleculer.Service {
+export default class ProductsService extends Moleculer.Service {
   @Action({
     auth: ['Basic'],
     visibility: 'published',
