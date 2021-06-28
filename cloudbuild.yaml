@@ -48,7 +48,7 @@ steps:
         "create",
         "configmap",
         "${_ENV_NAME}",
-        "--from-env-file=${_DEPLOY_FOLDER}.common-env",
+        "--from-env-file=${_DEPLOY_FOLDER}.env",
       ]
     env:
       - "CLOUDSDK_COMPUTE_ZONE=${_PROJECT_LOCATION}"
