@@ -24,7 +24,7 @@ spec:
   selector:
     matchLabels:
       app: api
-  replicas: 2
+  replicas: __API_DEPLOYMENT_REPLICA__
   template:
     metadata:
       labels:
@@ -41,3 +41,11 @@ spec:
           env:
             - name: SERVICES
               value: api
+          resources:
+            limits:
+              cpu: __API_CPU_LIMT__
+              memory: __API_RAM_LIMT__
+            requests:
+              cpu: __API_CPU_REQUEST__
+              memory: __API_RAM_REQUEST__
+---
