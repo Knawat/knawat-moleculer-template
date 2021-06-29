@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: products
-  replicas: 2
+  replicas: __PRODUCTS_DEPLOYMENT_REPLICA__
   template:
     metadata:
       labels:
@@ -26,5 +26,12 @@ spec:
           env:
             - name: SERVICES
               value: products
+          resources:
+            limits:
+              cpu: __PRODUCTS_CPU_LIMT__
+              memory: __PRODUCTS_RAM_LIMT__
+            requests:
+              cpu: __PRODUCTS_CPU_REQUEST__
+              memory: __PRODUCTS_RAM_REQUEST__
 ---
 
